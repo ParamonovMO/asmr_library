@@ -9,6 +9,7 @@ if __name__ == '__main__':
     library.add_book_to_library(book)
     library.add_book_to_library(book_2)
 
+    print(library)
     print(library.get_books_by_library())
     library.issue_book(book_2)
 

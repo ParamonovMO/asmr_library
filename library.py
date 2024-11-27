@@ -7,8 +7,7 @@ class Library:
         self.issue = []
 
     def __str__(self):
-        for k, v in self.library:
-            return str(f'{str(k), str(v)}')
+        return ', '.join(str(book) for book in self.library.values())
 
     def get_books_by_library(self):
         return self.library
