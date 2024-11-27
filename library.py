@@ -16,11 +16,13 @@ class Library:
         self.library[Library.count_books] = book
         Library.count_books += 1
 
-    def issue_book(self, book):
+    def issue_book(self, user, book):
         for k, v in list(self.library.items()):
             if v == book:
-                print(f'Название: {self.library.get(k)} выдана')
+                user.books.append(book)
+                print(f'Название: {self.library.get(k)} выдана {user.name, user.last_name}')
                 self.issue.append(self.library[k])
+
                 del self.library[k]
 
     def get_issue_books(self):

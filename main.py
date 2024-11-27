@@ -1,9 +1,13 @@
 from book import Book
 from library import Library
+from user import User
+
 
 if __name__ == '__main__':
     book = Book('У Лукоморья', 'Пушкин')
     book_2 = Book('Война и мир', 'Толстой')
+
+    user = User('Максим', 'Парамонов')
 
     library = Library()
     library.add_book_to_library(book)
@@ -11,7 +15,9 @@ if __name__ == '__main__':
 
     print(library)
     print(library.get_books_by_library())
-    library.issue_book(book_2)
+    library.issue_book(user, book_2)
+
+    print(user.get_user_books())
 
     print(library.get_books_by_library())
 
