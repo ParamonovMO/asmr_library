@@ -1,10 +1,10 @@
 class Book:
-    def __init__(self, title, autor):
+    def __init__(self, title, author):
         self.title = title
-        self.author = autor
+        self.author = author
 
     def __repr__(self):
         return f'{self.title}, {self.author}'
 
     def __str__(self):
-        return f'{self.title}, автор книги: {self.author}'
+        return f'Название книги: {self.title}, автор книги: {self.author}'

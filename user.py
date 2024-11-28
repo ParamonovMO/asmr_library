@@ -14,7 +14,7 @@ class User:
         self.books.remove(book)
 
     def __str__(self):
-        return f'{self.name, self.last_name}'
+        return f'{self.name, self.last_name, self.books}'
 
     def __repr__(self):
-        return f'{self.name, self.last_name}'
+        return f'{self.name, self.last_name, self.books}'
